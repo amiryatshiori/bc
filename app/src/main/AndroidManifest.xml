@@ -22,7 +22,6 @@
             android:name=".IncomingCall"
             android:label="@string/title_activity_incoming_call"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
