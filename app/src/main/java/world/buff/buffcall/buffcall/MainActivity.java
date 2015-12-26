@@ -2,6 +2,10 @@ package world.buff.buffcall.buffcall;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -82,14 +86,35 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                showScreen();
+                showIncomingCallScreen();
             }
         }, getResources().getInteger(R.integer.incoming_call_screen_delay_display));
 
     }
 
-    private void showScreen() {
+    private void showIncomingCallScreen() {
         Intent intent = new Intent(this, IncomingCall.class);
         startActivity(intent);
+
+        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+
+        Uri alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+
+        if(alert == null){
+            // alert is null, using backup
+            alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+
+            // I can't see this ever being null (as always have a default notification)
+            // but just incase
+            if(alert == null) {
+                // alert backup is null, using 2nd backup
+                alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
+            }
+        }
+
+        Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+        r.play();
+        //MediaPlayer mp = MediaPlayer.create(getApplicationContext(), alert);
+        //mp.start();
     }
 }
