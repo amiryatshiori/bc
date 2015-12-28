@@ -97,12 +97,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
         Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        if(notification == null) {
+            System.out.println("inside loop++++++++");
+            notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
+        }
 
-        Uri alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+
+        Uri alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
         if(alert == null){
             // alert is null, using backup
-            alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
 
             // I can't see this ever being null (as always have a default notification)
             // but just incase
@@ -114,7 +119,23 @@ public class MainActivity extends AppCompatActivity {
 
         Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
         r.play();
+
+        //For PRODUCTION USE THIS! for test use above
         //MediaPlayer mp = MediaPlayer.create(getApplicationContext(), alert);
+        //mp.setLooping(true);
         //mp.start();
+        /*
+        mp.stop();
+
+        mp.prepare();
+        mp.prepareAsync();
+        mp.start();
+        */
+
+
+
+        //assuming your Layout is named linearlayout1:
+       // LinearLayout ll = (LinearLayout) findViewById(R.id.linearlayout1);
+       // ll.setBackgroundResource(R.drawable.sample);
     }
 }

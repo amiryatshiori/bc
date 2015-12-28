@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/screen1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="world.buff.buffcall.buffcall.IncomingCall"
     tools:showIn="@layout/activity_incoming_call">
-
+<!--
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/incomingCallScreen"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/screen1" />
+        android:src="@drawable/screen1" /> -->
 </RelativeLayout>
