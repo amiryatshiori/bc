@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="world.buff.buffcall.buffcall.MainActivity">
+    tools:context="world.buff.buffcall.MainActivity">
 
     <include layout="@layout/content_main" />
 

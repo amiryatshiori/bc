@@ -1,4 +1,4 @@
-package world.buff.buffcall.buffcall;
+package world.buff.buffcall;
 
 import org.junit.Test;
 

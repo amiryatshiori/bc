@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="world.buff.buffcall.buffcall.IncomingCall">
+    tools:context="world.buff.buffcall.IncomingCall">
 
     <include layout="@layout/content_incoming_call" />
 

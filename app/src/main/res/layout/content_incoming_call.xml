@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/screen1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="world.buff.buffcall.buffcall.IncomingCall"
+    tools:context="world.buff.buffcall.IncomingCall"
     tools:showIn="@layout/activity_incoming_call">
 <!--
     <ImageView
@@ -16,4 +16,13 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/screen1" /> -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewMSISDN"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
 </RelativeLayout>

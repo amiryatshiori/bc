@@ -1,4 +1,4 @@
-package world.buff.buffcall.buffcall;
+package world.buff.buffcall;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,6 +22,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    public final static String EXTRA_MESSAGE = "world.buff.buffcall.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showIncomingCallScreen() {
         Intent intent = new Intent(this, IncomingCall.class);
+        intent.putExtra(EXTRA_MESSAGE, "0897646999");
         startActivity(intent);
 
         Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
