@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -96,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void showIncomingCallScreen() {
         Intent intent = new Intent(this, IncomingCall.class);
-        intent.putExtra(EXTRA_MESSAGE, "0897646999");
+        EditText editText = (EditText) findViewById(R.id.phone_number);
+        intent.putExtra(EXTRA_MESSAGE, editText.getText().toString());
         startActivity(intent);
 
         Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">BuffCall</string>
     <string name="action_settings">Settings</string>
-    <string name="button_save">Save</string>
+    <string name="contact_name">NAME</string>
+    <string name="contact_phone">PHONE</string>
+    <string name="button_save">Save new contact</string>
     <string name="title_activity_incoming_call">IncomingCall</string>
 </resources>
